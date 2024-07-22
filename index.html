@@ -6,6 +6,8 @@
   <title>Jakub Svoboda</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link rel="stylesheet" href="assets/styles/mystyle.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
 </head>
 <body class="bg-gray-100 text-gray-900">
 
@@ -13,9 +15,13 @@
     <div class="container mx-auto px-6 py-3 flex justify-between items-center">
       <div class="flex items-center space-x-2">
         <img src="assets/images/profile.png" alt="Logo" class="w-8 h-8">
-        <a href="#" class="text-xl font-bold text-gray-800">Jakub Svoboda</a>
+        <a href="#" id="navbar-title" class="text-xl font-bold text-gray-800">Jakub Svoboda</a>
       </div>
-      <button id="theme-toggle" class="btn">Toggle Theme</button>
+      <div class="flex items-center space-x-2">
+        <a href="#contact" class="btn">Contact</a>
+        <a href="https://www.platohq.com/@jakub-svoboda-ike62tltfhr" class="btn">Mentoring</a>
+        <button id="theme-toggle" class="btn">Toggle Theme</button>
+      </div>
     </div>
   </header>
 
@@ -26,7 +32,6 @@
         <h1 class="text-5xl font-bold w-full">Welcome! 👋🏻</h1>
         <p class="mt-4 text-gray-700 text-lg">My name is Jakub Svoboda and I am a software engineering manager @ The LEGO Group & business advisor for Blackfish.co. I'm dedicated to advocating the best quality of engineering practices and people leadership. Jakub Svoboda</p>
       </div>
-      
     </section>
 
     <div class="flex flex-wrap justify-center space-x-4">
@@ -35,8 +40,8 @@
           <img src="assets/logos/github-mark.svg" alt="GitHub Logo" class="w-16 h-16 mr-4">
           <div>
             <h2 class="text-2xl font-bold mb-2">GitHub</h2>
-            <p class="text-gray-700">I am continuously updating my Awesome-Engineering-Manager repository that contains a curated list of resources for software engineering managers. I would greatly appreciate your contribution or feedback!</p>
-            <a href="https://github.com" class="text-blue-600 hover:underline">Take me there</a>
+            <p class="text-gray-700">I am continuously updating my Awesome-Engineering-Manager repository that contains a curated list of resources for engineering managers. Do not hesitate to contribute!</p>
+            <a href="https://github.com/jakubsvobodacz/Awesome-Engineering-Manager" class="text-blue-600 hover:underline">Take me there</a>
           </div>
         </div>
       </section>
@@ -47,7 +52,7 @@
           <div>
             <h2 class="text-2xl font-bold mb-2">Medium</h2>
             <p class="text-gray-700">Explore engineering leadership through practical tips and real-world examples on my Medium blog. Each article is crafted with care. If you find value in my work, a clap would be greatly appreciated.</p>
-            <a href="https://medium.jakubsvoboda.net" class="text-blue-600 hover:underline">Take me there</a>
+            <a href="https://medium.com/@jakubsvobodacz" class="text-blue-600 hover:underline">Take me there</a>
           </div>
         </div>
       </section>
@@ -58,7 +63,7 @@
           <div>
             <h2 class="text-2xl font-bold mb-2">LinkedIn</h2>
             <p class="text-gray-700">Discover my professional journey and educational background on LinkedIn. Follow for engineering management tips or reach out directly—I'm always open to expanding my network.</p>
-            <a href="https://www.linkedin.com" class="text-blue-600 hover:underline">Take me there</a>
+            <a href="https://www.linkedin.com/in/jakubsvobodacz/" class="text-blue-600 hover:underline">Take me there</a>
           </div>
         </div>
       </section>
@@ -68,8 +73,8 @@
           <img src="assets/logos/leaddev.svg" alt="LeadDev Logo" class="w-16 h-16 mr-4">
           <div>
             <h2 class="text-2xl font-bold mb-2">LeadDev</h2>
-            <p class="text-gray-700">Take a look at my articles on LeadDev, where I contribute alongside top engineering leaders. This platform is a treasure for anyone interested in mastering engineering management and leadership.</p>
-            <a href="https://leaddev.com" class="text-blue-600 hover:underline">Take me there</a>
+            <p class="text-gray-700">Take a look at my articles on LeadDev, where I contribute alongside top engineering leaders. This platform is a treasure for anyone interested in engineering management.</p>
+            <a href="https://leaddev.com/community/jakub-svoboda" class="text-blue-600 hover:underline">Take me there</a>
           </div>
         </div>
       </section>
@@ -83,9 +88,14 @@
   </footer>
 
   <script>
-    const toggle = document.getElementById('theme-toggle');
-    toggle.addEventListener('click', () => {
-      document.body.classList.toggle('dark');
+    document.addEventListener("DOMContentLoaded", function() {
+      const toggle = document.getElementById('theme-toggle');
+      const navbarTitle = document.getElementById('navbar-title');
+
+      toggle.addEventListener('click', () => {
+        document.body.classList.toggle('dark');
+        navbarTitle.classList.toggle('dark-mode-title');
+      });
     });
   </script>
 

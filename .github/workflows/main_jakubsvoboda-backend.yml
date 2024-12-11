@@ -10,8 +10,8 @@ on:
   workflow_dispatch:
 
 env:
-  AZURE_FUNCTIONAPP_PACKAGE_PATH: '/backend' # set this to the path to your web app project, defaults to the repository root
-  NODE_VERSION: '20.x' # set this to the node version to use (supports 8.x, 10.x, 12.x)
+  AZURE_FUNCTIONAPP_PACKAGE_PATH: 'backend' # removed leading slash
+  NODE_VERSION: '20.x'
 
 jobs:
   build:
@@ -35,7 +35,9 @@ jobs:
           popd
 
       - name: Zip artifact for deployment
-        run: zip release.zip ./* -r
+        run: |
+          cd backend
+          zip -r ../release.zip ./*
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
@@ -72,5 +74,5 @@ jobs:
         with:
           app-name: 'jakubsvoboda-backend'
           slot-name: 'Production'
-          package: ${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}
+          package: './${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}'
           

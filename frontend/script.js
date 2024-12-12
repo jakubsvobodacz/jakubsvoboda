@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   openContactFormButton.addEventListener('click', () => {
+    document.getElementById('submitForm').reset();
     contactFormModal.classList.remove('hidden');
   });
 
@@ -19,21 +20,31 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   document.getElementById("submitForm").addEventListener("submit", (event) => {
-    event.preventDefault(); //do not submit the form the regular url encoded way
+    event.preventDefault(); //prevent the default form submission
+    
+    // Create and show loading indicator
+    const loadingModal = document.createElement('div');
+    loadingModal.innerHTML = `
+      <div class="fixed z-10 inset-0 overflow-y-auto">
+        <div class="flex items-center justify-center min-h-screen relative">
+          <div class="fixed inset-0 bg-black opacity-70 z-0"></div>
+          <div class="bg-white w-1/3 p-8 rounded-lg shadow-md z-10 text-center">
+            <div class="flex justify-center mb-4">
+              <div class="animate-spin rounded-full h-10 w-10 border-b-2 border-blue-500"></div>
+            </div>
+            <p>Sending message...</p>
+          </div>
+        </div>
+      </div>`;
+    document.body.appendChild(loadingModal);
 
     const form = document.getElementById('submitForm');
     const formData = new FormData(form);
     const jsonData = {};
-
-    //build json object from the form data by identifying the keys and values from the form
+    
     formData.forEach((value, key) => {
       jsonData[key] = value;
     });
-
-    console.log(jsonData);
-    const test = JSON.stringify(jsonData);
-    console.log(test);
-
 
     fetch(form.action, {
       method: 'POST',
@@ -43,10 +54,13 @@ document.addEventListener("DOMContentLoaded", function () {
       body: JSON.stringify(jsonData)
     })
       .then(response => {
+        // Remove loading indicator
+        document.body.removeChild(loadingModal);
+        
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
-        return response.text(); // Parse the response as plain text
+        return response.text();
       })
       .then(emailSubmissionStatus => {
         // Optionally, handle success (e.g., show a success message)
@@ -80,6 +94,10 @@ document.addEventListener("DOMContentLoaded", function () {
         }, 3000);
       })
       .catch((error) => {
+        // Remove loading indicator in case of error
+        if (loadingModal.parentNode) {
+          document.body.removeChild(loadingModal);
+        }
         console.error('Error:', error);
         // Optionally, handle error (e.g., show an error message)
       });

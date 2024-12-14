@@ -5,6 +5,8 @@ require('dotenv').config();
 
 const acs = process.env.ACS_CONNECTION_STRING;
 const email = process.env.EMAIL;
+const deliveryEmail = process.env.DELIVERY_EMAIL;
+const senderEmail = process.env.SENDER_EMAIL;
 
 
 app.http('submitForm', {
@@ -23,7 +25,7 @@ app.http('submitForm', {
             
             //build the message object
              const emailMessage = {
-                senderAddress: 'DoNotReply@7bc1c799-0916-404a-b2e5-5b00a29f4b7b.azurecomm.net', // Replace with your verified sender domain
+                senderAddress: senderEmail,
                 content: {
                   subject: 'jakubsvoboda.net contact',
                   plainText: `You have received a new message from: \n\nName: ${name}\nEmail: ${email}\nMessage: ${message}`
@@ -31,7 +33,7 @@ app.http('submitForm', {
                 recipients: {
                   to: [
                     {
-                      address: 'jakubsvobodacz@gmail.com',
+                      address: deliveryEmail,
                       displayName: 'Jakub'
                     }
                   ]

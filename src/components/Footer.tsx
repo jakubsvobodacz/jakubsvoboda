@@ -17,7 +17,7 @@ const Footer = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-16">
+          <div className="grid grid-cols-1 sm:grid-cols-1 gap-8 text-left">
             <div>
               <h3 className="font-medium mb-3 text-sm tracking-wider uppercase text-muted-foreground">
                 Contact
@@ -25,7 +25,7 @@ const Footer = () => {
               <ul className="space-y-2">
                 <li className="flex items-center space-x-2 text-sm">
                   <Mail className="h-4 w-4 text-muted-foreground" />
-                  <span>jakub@svoboda.net</span>
+                  <span>hello@jakubsvoboda.net</span>
                 </li>
                 <li className="flex items-center space-x-2 text-sm">
                   <MapPin className="h-4 w-4 text-muted-foreground" />

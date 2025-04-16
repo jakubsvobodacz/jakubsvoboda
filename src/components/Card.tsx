@@ -12,15 +12,16 @@ const Card = ({ type, className }: CardProps) => {
     github: {
       title: "GitHub",
       description:
-        "Check out my open source contributions and personal projects",
+        "I am continuously updating my Awesome-Engineering-Manager repository that contains a curated list of resources for engineering managers. Do not hesitate to contribute!",
       icon: FaGithub,
       link: "https://github.com/jakubsvobodacz",
-      bgColor: "bg-black",
+      bgColor: "bg-gradient-to-r from-black to-gray-800",
       textColor: "text-white",
     },
     leaddev: {
       title: "LeadDev",
-      description: "Articles and resources on engineering leadership",
+      description:
+        "Take a look at my articles on LeadDev, where I contribute alongside top engineering leaders. This platform is a treasure for anyone interested in engineering management.",
       icon: Code,
       link: "https://leaddev.com/community/jakub-svoboda",
       bgColor: "bg-gradient-to-r from-[#FF326E] to-[#FF326E]",
@@ -28,7 +29,8 @@ const Card = ({ type, className }: CardProps) => {
     },
     linkedin: {
       title: "LinkedIn",
-      description: "Connect with me professionally and see my career journey",
+      description:
+        "Discover my professional journey and educational background on LinkedIn. Follow for engineering management tips or reach out directly—I'm always open to expanding my network.",
       icon: FaLinkedin,
       link: "https://www.linkedin.com/in/jakubsvobodacz/",
       bgColor: "bg-gradient-to-r from-blue-600 to-blue-800",
@@ -36,7 +38,8 @@ const Card = ({ type, className }: CardProps) => {
     },
     medium: {
       title: "Medium",
-      description: "Read my articles on software development and tech trends",
+      description:
+        "Explore engineering leadership through practical tips and real-world examples on my Medium blog. Each article is crafted with care. If you find value in my work, a clap would be greatly appreciated.",
       icon: BookOpen,
       link: "https://medium.com/@jakubsvobodacz",
       bgColor: "bg-gradient-to-r from-[#D9C597] to-[#F1DCAF]",

@@ -1,54 +1,34 @@
-# React + TypeScript + Vite
+# Jakub Svoboda
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[![Website](https://img.shields.io/badge/Website-jakubsvoboda.net-blue)](https://jakubsvoboda.net)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-jakubsvobodacz-0077B5?logo=linkedin)](https://www.linkedin.com/in/jakubsvobodacz/)
+[![Medium](https://img.shields.io/badge/Medium-jakubsvobodacz-000000?logo=medium)](https://medium.com/@jakubsvobodacz)
+[![GitHub](https://img.shields.io/badge/GitHub-jakubsvobodacz-181717?logo=github)](https://github.com/jakubsvobodacz)
 
-Currently, two official plugins are available:
+## Purpose
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This repository serves as a reference for my personal brand and online presence. It's intended to provide information about me and my work as an Engineering Manager at The LEGO Group.
 
-## Expanding the ESLint configuration
+## Technologies Used
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **React 19** - Latest version of React
+- **TypeScript** - For type safety
+- **Tailwind** - For styling
+- **Vite** - For building
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Important Notice
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+**This repository is not intended for forking or cloning.** It's shared publicly to showcase my code structure but is designed specifically for my personal use.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Connect With Me
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+I'm always open to discussions about engineering leadership, best practices, and professional growth. Feel free to connect with me through any of the channels below:
+
+- **LinkedIn:** [linkedin.com/in/jakubsvobodacz](https://www.linkedin.com/in/jakubsvobodacz/)
+- **Medium:** [medium.com/@jakubsvobodacz](https://medium.com/@jakubsvobodacz)
+- **GitHub:** [github.com/jakubsvobodacz](https://github.com/jakubsvobodacz)
+- **LeadDev:** [leaddev.com/community/jakub-svoboda](https://leaddev.com/community/jakub-svoboda)
+
+## Awesome Repository for Engineering Managers
+
+If you're interested in engineering management resources, check out my [Awesome-Engineering-Manager](https://github.com/jakubsvobodacz/awesome-engineering-manager) repository - a curated list of resources for engineering leaders.

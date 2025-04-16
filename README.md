@@ -18,7 +18,7 @@ This repository serves as a reference for my personal brand and online presence.
 
 ## Important Notice
 
-**This repository is not intended for forking or cloning.** It's shared publicly to showcase my code structure but is designed specifically for my personal use.
+**This repository is not intended for forking or cloning.** It's shared publicly to show my code structure but is designed specifically for my personal use.
 
 ## Connect With Me
 

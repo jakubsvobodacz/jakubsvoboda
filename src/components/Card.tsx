@@ -14,33 +14,33 @@ const Card = ({ type, className }: CardProps) => {
       description:
         "Check out my open source contributions and personal projects",
       icon: FaGithub,
-      link: "https://github.com",
-      bgGradient: "from-primary to-primary/80",
-      textColor: "text-primary-foreground",
+      link: "https://github.com/jakubsvobodacz",
+      bgColor: "bg-black",
+      textColor: "text-white",
     },
     leaddev: {
       title: "LeadDev",
       description: "Articles and resources on engineering leadership",
       icon: Code,
-      link: "https://leaddev.com",
-      bgGradient: "from-destructive to-destructive/80",
-      textColor: "text-destructive-foreground",
+      link: "https://leaddev.com/community/jakub-svoboda",
+      bgColor: "bg-gradient-to-r from-[#FF326E] to-[#FF326E]",
+      textColor: "text-white",
     },
     linkedin: {
       title: "LinkedIn",
       description: "Connect with me professionally and see my career journey",
       icon: FaLinkedin,
-      link: "https://linkedin.com",
-      bgGradient: "from-secondary to-secondary/80",
-      textColor: "text-secondary-foreground",
+      link: "https://www.linkedin.com/in/jakubsvobodacz/",
+      bgColor: "bg-gradient-to-r from-blue-600 to-blue-800",
+      textColor: "text-white",
     },
     medium: {
       title: "Medium",
       description: "Read my articles on software development and tech trends",
       icon: BookOpen,
-      link: "https://medium.com",
-      bgGradient: "from-accent to-accent/80",
-      textColor: "text-accent-foreground",
+      link: "https://medium.com/@jakubsvobodacz",
+      bgColor: "bg-gradient-to-r from-[#D9C597] to-[#F1DCAF]",
+      textColor: "text-white",
     },
   };
 
@@ -54,7 +54,7 @@ const Card = ({ type, className }: CardProps) => {
       rel="noopener noreferrer"
       className={cn(
         "relative overflow-hidden rounded-2xl transition-all duration-300 hover:shadow-lg hover:-translate-y-2",
-        `bg-gradient-to-br ${config.bgGradient}`,
+        config.bgColor,
         config.textColor,
         className
       )}
@@ -66,19 +66,19 @@ const Card = ({ type, className }: CardProps) => {
             <ExternalLink className="h-5 w-5 opacity-70" />
           </div>
           <h3 className="text-xl font-semibold mb-2">{config.title}</h3>
-          <p className="opacity-80">{config.description}</p>
+          <p>{config.description}</p>
         </div>
 
         <div className="mt-6 flex justify-end">
-          <div className="text-sm font-medium flex items-center gap-1 opacity-70 hover:opacity-100 transition-opacity">
+          <div className="text-sm font-medium flex items-center gap-1 text-white/70 hover:text-white transition-colors">
             Visit <ExternalLink className="h-3 w-3" />
           </div>
         </div>
       </div>
 
       {/* Decorative elements */}
-      <div className="absolute top-0 right-0 -mt-12 -mr-12 h-40 w-40 opacity-30 blur-3xl rounded-full bg-foreground/10" />
-      <div className="absolute bottom-0 left-0 -mb-12 -ml-12 h-32 w-32 opacity-20 blur-3xl rounded-full bg-foreground/10" />
+      <div className="absolute top-0 right-0 -mt-12 -mr-12 h-40 w-40 opacity-30 blur-xl rounded-full bg-white/10" />
+      <div className="absolute bottom-0 left-0 -mb-12 -ml-12 h-32 w-32 opacity-20 blur-xl rounded-full bg-white/10" />
     </a>
   );
 };

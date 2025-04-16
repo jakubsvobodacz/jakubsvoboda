@@ -3,7 +3,6 @@ import Navbar from "@/components/Navbar";
 import Card from "@/components/Card";
 import Footer from "@/components/Footer";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
-import { Button } from "@/components/ui/button";
 
 const Index = () => {
   const [loaded, setLoaded] = useState(false);
@@ -28,7 +27,7 @@ const Index = () => {
               <div className="w-full md:w-1/3 flex justify-center md:justify-start mb-6 md:mb-0">
                 <Avatar className="w-60 h-60 rounded-full">
                   <AvatarImage
-                    src="/profile.png"
+                    src="/src/assets/profile.png"
                     alt="Jakub Svoboda"
                     className="object-cover"
                   />
@@ -42,15 +41,15 @@ const Index = () => {
                 </span>
 
                 <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight mb-6">
-                  Crafting digital experiences with passion and precision
+                  Welcome! 👋🏻
                 </h1>
 
-                <p className="text-xl text-muted-foreground max-w-3xl mb-10">
+                <p className="text-xl max-w-3xl mb-10">
                   My name is Jakub Svoboda and I am a software engineering
                   manager @ The LEGO Group. I'm dedicated to advocating the best
-                  quality of engineering practices and people leadership.
+                  quality of engineering practices and people leadership for my
+                  teams.
                 </p>
-                <Button>Button</Button>
               </div>
             </div>
           </div>
@@ -61,26 +60,14 @@ const Index = () => {
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="container mx-auto max-w-5xl">
           <h2 className="text-2xl sm:text-3xl font-bold mb-12 text-center">
-            Connect with me online
+            Connect with me online 👇🏻
           </h2>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 animate-delayed-fade-in">
-            <Card
-              type="github"
-              className="animate-slide-up opacity-0 [animation-fill-mode:forwards] [animation-delay:0.1s]"
-            />
-            <Card
-              type="leaddev"
-              className="animate-slide-up opacity-0 [animation-fill-mode:forwards] [animation-delay:0.2s]"
-            />
-            <Card
-              type="linkedin"
-              className="animate-slide-up opacity-0 [animation-fill-mode:forwards] [animation-delay:0.3s]"
-            />
-            <Card
-              type="medium"
-              className="animate-slide-up opacity-0 [animation-fill-mode:forwards] [animation-delay:0.4s]"
-            />
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <Card type="github" className="animate-slide-up" />
+            <Card type="leaddev" className="animate-slide-up" />
+            <Card type="linkedin" className="animate-slide-up" />
+            <Card type="medium" className="animate-slide-up" />
           </div>
         </div>
       </section>

@@ -24,14 +24,16 @@ const Navbar = () => {
   return (
     <header
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-        scrolled ? "blur-backdrop py-3 shadow-sm" : "py-5"
+        scrolled
+          ? "backdrop-blur-xl bg-white/60 dark:bg-black/60 py-3 shadow-sm"
+          : "py-5"
       }`}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-3 animate-slide-down">
             <Avatar className="w-10 h-10">
-              <AvatarImage src="/profile.png" alt="Jakub Svoboda" />
+              <AvatarImage src="/src/assets/profile.png" alt="Jakub Svoboda" />
               <AvatarFallback>JS</AvatarFallback>
             </Avatar>
             <span className="font-medium text-lg tracking-tight">

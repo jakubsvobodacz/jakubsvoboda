@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+import profileImage from "@/assets/profile.png";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -33,7 +34,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-3 animate-slide-down">
             <Avatar className="w-10 h-10">
-              <AvatarImage src="/src/assets/profile.png" alt="Jakub Svoboda" />
+              <AvatarImage src={profileImage} alt="Jakub Svoboda" />
               <AvatarFallback>JS</AvatarFallback>
             </Avatar>
             <span className="font-medium text-lg tracking-tight">

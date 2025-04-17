@@ -3,6 +3,7 @@ import Navbar from "@/components/Navbar";
 import Card from "@/components/Card";
 import Footer from "@/components/Footer";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+import profileImage from "@/assets/profile.png";
 
 const Index = () => {
   const [loaded, setLoaded] = useState(false);
@@ -27,7 +28,7 @@ const Index = () => {
               <div className="w-full md:w-1/3 flex justify-center md:justify-start mb-6 md:mb-0">
                 <Avatar className="w-60 h-60 rounded-full">
                   <AvatarImage
-                    src="/src/assets/profile.png"
+                    src={profileImage}
                     alt="Jakub Svoboda"
                     className="object-cover"
                   />

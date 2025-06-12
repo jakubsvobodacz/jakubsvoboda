@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
-import profileImage from "@/assets/profile.png";
+import profileImage from "@/assets/avatar_round.jpg";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);

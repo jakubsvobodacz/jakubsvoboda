@@ -3,7 +3,7 @@ import Navbar from "@/components/Navbar";
 import Card from "@/components/Card";
 import Footer from "@/components/Footer";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
-import profileImage from "@/assets/profile.png";
+import profileImage from "@/assets/avatar_no_bckg.png";
 
 const Index = () => {
   const [loaded, setLoaded] = useState(false);
@@ -24,28 +24,33 @@ const Index = () => {
               loaded ? "opacity-100" : "opacity-0"
             }`}
           >
-            <div className="flex flex-col md:flex-row items-start gap-8 mb-10">
+            <div className="flex flex-col md:flex-row items-center md:items-center gap-8 mb-10">
               <div className="w-full md:w-1/3 flex justify-center md:justify-start mb-6 md:mb-0">
-                <Avatar className="w-60 h-60 rounded-full">
-                  <AvatarImage
-                    src={profileImage}
-                    alt="Jakub Svoboda"
-                    className="object-cover"
-                  />
-                  <AvatarFallback className="text-4xl">JS</AvatarFallback>
-                </Avatar>
+                <div className="relative">
+                  <Avatar className="w-96 h-[432px] rounded-none overflow-hidden">
+                    <AvatarImage
+                      src={profileImage}
+                      alt="Jakub Svoboda"
+                      className="w-full h-full object-contain"
+                    />
+                    <AvatarFallback className="text-4xl rounded-none">JS</AvatarFallback>
+                  </Avatar>
+                  <div className="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-t from-background via-background/90 to-transparent pointer-events-none"></div>
+                </div>
               </div>
 
-              <div className="w-full md:w-2/3">
-                <span className="inline-block py-1 px-3 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
-                  serverless and ai-powered, this is the way.
-                </span>
+              <div className="w-full md:w-2/3 flex flex-col justify-center text-center md:text-left md:py-16">
+                <div className="mb-6">
+                  <span className="inline-block py-1 px-3 rounded-full bg-primary/10 text-primary text-sm font-medium">
+                    serverless and ai-powered, this is the way.
+                  </span>
+                </div>
 
-                <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight mb-6">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6">
                   Welcome! 👋🏻
                 </h1>
 
-                <p className="text-xl max-w-3xl mb-10">
+                <p className="text-lg sm:text-xl max-w-3xl mb-10 mx-auto md:mx-0">
                   My name is Jakub Svoboda and I am a software engineering
                   manager @ The LEGO Group. I'm dedicated to advocating the best
                   quality of engineering practices and people leadership for my

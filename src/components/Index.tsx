@@ -52,7 +52,7 @@ const Index = () => {
 
                 <p className="text-lg sm:text-xl max-w-3xl mb-10 mx-auto md:mx-0">
                   My name is Jakub Svoboda and I am a software engineering
-                  manager @ The LEGO Group. I'm dedicated to advocating the best
+                  manager at The LEGO Group. I'm dedicated to advocating the best
                   quality of engineering practices and people leadership for my
                   teams.
                 </p>

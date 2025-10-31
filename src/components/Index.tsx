@@ -4,6 +4,7 @@ import Card from "@/components/Card";
 import Footer from "@/components/Footer";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import profileImage from "@/assets/avatar_no_bckg.png";
+import { Loader2 } from "lucide-react";
 
 const Index = () => {
   const [loaded, setLoaded] = useState(false);
@@ -33,7 +34,9 @@ const Index = () => {
                       alt="Jakub Svoboda"
                       className="w-full h-full object-contain"
                     />
-                    <AvatarFallback className="text-4xl rounded-none">JS</AvatarFallback>
+                    <AvatarFallback>
+                      <Loader2 className="w-10 h-10 animate-spin" />
+                    </AvatarFallback>
                   </Avatar>
                   <div className="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-t from-background via-background/90 to-transparent pointer-events-none"></div>
                 </div>
@@ -52,7 +55,7 @@ const Index = () => {
 
                 <p className="text-lg sm:text-xl max-w-3xl mb-10 mx-auto md:mx-0">
                   My name is Jakub Svoboda and I am a software engineering
-                  manager at The LEGO Group. I'm dedicated to advocating the best
+                  manager at Rohlik Group 🥐. I'm dedicated to advocating the best
                   quality of engineering practices and people leadership for my
                   teams.
                 </p>
